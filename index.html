@@ -4,21 +4,177 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>opening Telegram</title>
+<title>Telegram Channel</title>
 
-<meta property="og:title" content="Telegram: Join Group Chat">
-<meta property="og:description" content="Telegram: Join Group Chat">
-<meta property="og:type" content="website">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
 
-<!-- ইচ্ছা করে og:image দেওয়া হয়নি -->
+body{
+background:#17212b;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+color:#fff;
+}
 
-<meta http-equiv="refresh" content="0; url=https://t.me/bdexposhub">
+.card{
+width:100%;
+max-width:430px;
+background:#242f3d;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
 
+.header{
+height:70px;
+background:#2b5278;
+display:flex;
+align-items:center;
+padding:0 20px;
+font-size:22px;
+font-weight:bold;
+}
+
+.header svg{
+width:28px;
+margin-right:12px;
+fill:white;
+}
+
+.cover{
+height:130px;
+background:linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.avatar{
+width:120px;
+height:120px;
+border-radius:50%;
+margin:auto;
+margin-top:-60px;
+display:block;
+border:5px solid #242f3d;
+object-fit:cover;
+background:#fff;
+}
+
+.content{
+padding:20px;
+text-align:center;
+}
+
+h1{
+font-size:30px;
+margin-bottom:8px;
+}
+
+.subscribers{
+color:#9eb1c3;
+margin-bottom:20px;
+font-size:16px;
+}
+
+.description{
+line-height:1.7;
+font-size:16px;
+color:#d5dde5;
+margin-bottom:30px;
+}
+
+.button{
+display:block;
+background:#2AABEE;
+padding:16px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+font-size:18px;
+border-radius:12px;
+transition:.25s;
+}
+
+.button:hover{
+background:#229ED9;
+transform:translateY(-2px);
+}
+
+.footer{
+padding:15px;
+text-align:center;
+font-size:13px;
+color:#90a3b5;
+}
+</style>
 </head>
+
 <body>
 
+<div class="card">
+
+<div class="header">
+
+<svg viewBox="0 0 240 240">
+<path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm57.2 82.3l-19.7 92.8c-1.5 6.6-5.5 8.2-11.2 5.1l-31-22.9-15 14.4c-1.7 1.7-3.1 3.1-6.3 3.1l2.2-31.4 57.2-51.7c2.5-2.2-.5-3.4-3.8-1.2l-70.7 44.5-30.5-9.5c-6.6-2.1-6.8-6.6 1.4-9.8l119.3-46c5.5-2 10.4 1.4 8.1 10.6z"/>
+</svg>
+
+Telegram
+
+</div>
+
+<div class="cover"></div>
+
+<img id="avatar" class="avatar">
+
+<div class="content">
+
+<h1 id="title"></h1>
+
+<div class="subscribers" id="subs"></div>
+
+<div class="description" id="desc"></div>
+
+<a id="join" class="button">
+JOIN CHANNEL
+</a>
+
+</div>
+
+<div class="footer">
+Powered by Telegram Community
+</div>
+
+</div>
+
 <script>
-window.location.replace("https://sitefleck.com/ay6m4vgtph?key=6dad5ee913bdad65157b7e73d0d11a26");
+
+const CONFIG={
+
+image:"https://i.imgur.com/0y8Ftya.jpeg",
+
+title:"Xenora News",
+
+subscribers:"12,856 subscribers",
+
+description:"Stay updated with the latest News, Technology, Smartphones, AI, Gadgets and much more.",
+
+join:"https://t.me/yourchannel"
+
+};
+
+document.getElementById("avatar").src=CONFIG.image;
+document.getElementById("title").innerHTML=CONFIG.title;
+document.getElementById("subs").innerHTML=CONFIG.subscribers;
+document.getElementById("desc").innerHTML=CONFIG.description;
+document.getElementById("join").href=CONFIG.join;
+
 </script>
 
 </body>
