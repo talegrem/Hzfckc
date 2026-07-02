@@ -1,39 +1,119 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Channel Landing</title>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Channel Invite</title>
 <style>
-body{margin:0;background:#17212b;font-family:Arial,sans-serif;color:#fff;display:flex;align-items:center;justify-content:center;min-height:100vh}
-.card{width:380px;background:#242f3d;border-radius:18px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.4)}
-.top{background:#2b5278;padding:16px;font-weight:bold}
-.banner{height:110px;background:linear-gradient(135deg,#2AABEE,#4f7cff)}
-.avatar{width:110px;height:110px;border-radius:50%;display:block;margin:-55px auto 0;border:4px solid #242f3d;object-fit:cover}
-.c{padding:20px;text-align:center}
-h1{margin:12px 0 4px}
-.sub{color:#aeb8c3}
-.btn{display:block;margin:22px 0;padding:14px;background:#2AABEE;color:#fff;text-decoration:none;border-radius:10px;font-weight:bold}
-.desc{color:#d5dbe1;line-height:1.5}
-</style></head><body>
-<div class="card">
-<div class="top">Telegram‑style Channel</div>
-<div class="banner"></div>
-<img id="img" class="avatar">
-<div class="c">
-<h1 id="title"></h1>
-<div id="subs" class="sub"></div>
-<p id="desc" class="desc"></p>
-<a id="join" class="btn">JOIN CHANNEL</a>
-</div></div>
-<script>
-const CONFIG={
-image:"https://placehold.co/220x220/png",
-title:"Xenora News",
-subscribers:"12,345 subscribers",
-description:"Latest technology, AI, gadgets and news.",
-join:"https://t.me/yourchannel"
-};
-img.src=CONFIG.image;
-title.textContent=CONFIG.title;
-subs.textContent=CONFIG.subscribers;
-desc.textContent=CONFIG.description;
-join.href=CONFIG.join;
-</script></body></html>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0e0e0e;
+    color: #fff;
+    background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    background: #1c1c1c;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .topbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .tg-icon {
+    width: 32px;
+    height: 32px;
+    background: #229ED9;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  .tg-icon svg { width: 20px; fill: #fff; }
+  .download-btn {
+    margin-left: auto;
+    background: #229ED9;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .card {
+    max-width: 380px;
+    margin: 60px auto;
+    background: #1c1c1c;
+    border-radius: 16px;
+    padding: 24px 20px 32px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    background: #333 url('https://via.placeholder.com/120') center/cover no-repeat;
+    border: 3px solid #2a2a2a;
+  }
+  .channel-name {
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .subs {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .join-btn {
+    width: 100%;
+    background: #229ED9;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .invite-text {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 18px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="logo">
+      <div class="tg-icon">
+        <svg viewBox="0 0 240 240"><path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm58.6 85.2l-19.8 93.5c-1.5 6.8-5.5 8.5-11.1 5.3l-30.7-22.6-14.8 14.2c-1.6 1.6-3 3-6.1 3l2.2-31.1 56.7-51.2c2.5-2.2-.5-3.4-3.8-1.2l-70 44.1-30.1-9.4c-6.5-2-6.6-6.5 1.4-9.7l117.6-45.3c5.5-2 10.2 1.3 8.4 9.3z"/></svg>
+      </div>
+      Telegram
+    </div>
+    <button class="download-btn">DOWNLOAD</button>
+  </div>
+
+  <div class="card">
+    <div class="avatar"></div>
+    <div class="channel-name">YOUR CHANNEL NAME</div>
+    <div class="subs">2,333 subscribers</div>
+    <button class="join-btn">JOIN CHANNEL</button>
+    <div class="invite-text">
+      You are invited to the channel <b>YOUR CHANNEL NAME</b>. Click above to join.
+    </div>
+  </div>
+
+</body>
+</html>
