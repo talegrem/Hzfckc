@@ -1,106 +1,83 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <script src="https://sitefleck.com/54/cf/b8/54cfb8c35fcfb730f9eb33a7abdac51c.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Telegram Channel Invite</title>
+<title>Join Channel</title>
 <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #fff;
-
-    /* Background Image */
-    background: url("images.jpg") center center / cover no-repeat fixed;
-
-    /* Optional Dark Overlay */
-    position: relative;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    z-index: -1;
-}
+    background: linear-gradient(180deg, #c8f0c8 0%, #a0e0a0 100%);
+    min-height: 100vh;
+    background-image: url('https://i.imgur.com/8Km9tLL.png'); /* Telegram pattern */
+    background-size: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .topbar {
+    width: 100%;
+    background: #fff;
     display: flex;
     align-items: center;
-    padding: 10px 12px;
-    background: #1c1c1c;
-    border-bottom: 1px solid #2a2a2a;
+    justify-content: space-between;
+    padding: 10px 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
-  .topbar .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    font-size: 18px;
-  }
-  .tg-icon {
-    width: 32px;
-    height: 32px;
+  .topbar .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; }
+  .topbar .logo img { width: 32px; height: 32px; }
+  .btn-download {
     background: #229ED9;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-  }
-  .tg-icon svg { width: 20px; fill: #fff; }
-  .download-btn {
-    margin-left: auto;
-    background: #229ED9;
-    border: none;
     color: #fff;
-    padding: 8px 16px;
-    border-radius: 20px;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 22px;
     font-weight: 600;
     cursor: pointer;
   }
   .card {
-    max-width: 380px;
-    margin: 60px auto;
-    background: #1c1c1c;
+    background: #fff;
+    width: 90%;
+    max-width: 420px;
+    margin-top: 40px;
     border-radius: 16px;
-    padding: 24px 20px 32px;
+    padding: 30px 20px;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   }
   .avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    object-fit: cover;
     margin: 0 auto 16px;
-    background: #333 url('https://via.placeholder.com/120') center/cover no-repeat;
-    border: 3px solid #2a2a2a;
   }
   .channel-name {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     font-style: italic;
     margin-bottom: 6px;
   }
-  .subs {
-    color: #aaa;
-    font-size: 14px;
+  .subscribers {
+    color: #777;
+    font-size: 15px;
     margin-bottom: 20px;
   }
-  .join-btn {
-    width: 100%;
+  .btn-join {
     background: #229ED9;
-    border: none;
     color: #fff;
-    padding: 12px;
-    border-radius: 24px;
+    border: none;
+    padding: 14px 0;
+    width: 80%;
+    border-radius: 25px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
+    margin-bottom: 20px;
   }
   .invite-text {
-    color: #aaa;
+    color: #666;
     font-size: 14px;
-    margin-top: 18px;
     line-height: 1.5;
   }
 </style>
@@ -109,32 +86,21 @@ body::before {
 
   <div class="topbar">
     <div class="logo">
-      <div class="tg-icon">
-        <svg viewBox="0 0 240 240"><path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm58.6 85.2l-19.8 93.5c-1.5 6.8-5.5 8.5-11.1 5.3l-30.7-22.6-14.8 14.2c-1.6 1.6-3 3-6.1 3l2.2-31.1 56.7-51.2c2.5-2.2-.5-3.4-3.8-1.2l-70 44.1-30.1-9.4c-6.5-2-6.6-6.5 1.4-9.7l117.6-45.3c5.5-2 10.2 1.3 8.4 9.3z"/></svg>
-      </div>
-      Telegram
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="logo">
+      <span>Telegram</span>
     </div>
-    <button class="download-btn">DOWNLOAD</button>
+    <button class="btn-download">DOWNLOAD</button>
   </div>
 
   <div class="card">
-    <div class="avatar"></div>
-    <div class="channel-name">YOUR CHANNEL NAME</div>
-    <div class="subs">2,333 subscribers</div>
-    <button class="join-btn">JOIN CHANNEL</button>
+    <img src="YOUR_IMAGE_URL_HERE.jpg" class="avatar" alt="channel photo">
+    <div class="channel-name">LINK BD OFFICIAL </div>
+    <div class="subscribers">2 629 subscribers</div>
+    <button class="btn-join" onclick="window.location.href='YOUR_TELEGRAM_LINK'">JOIN CHANNEL</button>
     <div class="invite-text">
-      You are invited to the channel <b>YOUR CHANNEL NAME</b>. Click above to join.
+      You are invited to the channel <i>LINK BD OFFICIAL</i>. Click above to join.
     </div>
   </div>
-  <script>
-  atOptions = {
-    'key' : '58e3536c3c307139c47de22273736cb6',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
-</script>
-<script src="https://sitefleck.com/58e3536c3c307139c47de22273736cb6/invoke.js"></script>
+
 </body>
 </html>
