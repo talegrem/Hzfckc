@@ -8,11 +8,22 @@
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0e0e0e;
     color: #fff;
-    background-image: radial-gradient(#1f1f1f 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
+
+    /* Background Image */
+    background: url("images.jpg") center center / cover no-repeat fixed;
+
+    /* Optional Dark Overlay */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
   .topbar {
     display: flex;
     align-items: center;
