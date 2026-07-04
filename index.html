@@ -111,7 +111,17 @@
     <img src="imagess.jpg" class="avatar" alt="channel photo">
     <div class="channel-name">LINK BD OFFICIAL </div>
     <div class="subscribers">2 629 subscribers</div>
-    <button class="btn-join" onclick="window.location.href='YOUR_TELEGRAM_LINK'">JOIN CHANNEL</button>
+   <button class="btn-join" onclick="joinChannel()">JOIN CHANNEL</button>
+
+<script>
+function joinChannel() {
+  // 1. নতুন ট্যাবে যে ল্যান্ডিং পেজটা খুলবে
+  window.open('www.bikroy.com', '_blank');
+
+  // 2. বর্তমান ট্যাবটা যে পেজে যাবে
+  window.location.href = 'facebook.com';
+}
+</script>
     <div class="invite-text">
       You are invited to the channel <i>LINK BD OFFICIAL</i>. Click above to join.
     </div>
