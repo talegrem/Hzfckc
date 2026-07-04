@@ -82,12 +82,19 @@
   }
    .banner{
     width:90%;
+    max-width:420px; /* card-এর মতো একই width */
+    margin:20px auto;
     display:flex;
     justify-content:center;
     align-items:center;
-    margin:20px auto 30px;
     overflow:hidden;
-   }
+}
+
+.banner iframe,
+.banner img{
+    width:100%;
+    height:auto;
+}
 </style>
 </head>
 <body>
